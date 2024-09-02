@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth text-sm md:text-base xl:text-lg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+
+    <meta name="author" content="Pradeep Jat" />
+    <meta property="og:title" content="Pradeep Jat | Full Stack Developer Portfolio" />
+    <meta property="og:description"
+        content="Explore the portfolio of Pradeep Jat, showcasing projects built with HTML, Tailwind CSS, and JavaScript, deployed on Netlify." />
+    <meta property="og:image" content="images/logo.jpg" />
+    <meta property="og:url" content="https://pradeepjat.netlify.app/" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pradeep Jat | Full Stack Developer Portfolio" />
+    <meta name="twitter:description"
+        content="Explore the portfolio of Pradeep Jat, showcasing projects built with HTML, Tailwind CSS, and JavaScript, deployed on Netlify." />
+    <meta name="twitter:image" content="images/logo.jpg" />
+
+    <meta name="robots" content="index, follow" />
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
+        integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- css files -->
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Pradeep Jat | Full Stack Developer Portfolio</title>
+</head>
+
+<body class="bg-[#111] font-['Nunito']">
+    <!-- loader  -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+    <!-- header  -->
+    <header id="header" class="text-white min-h-screen flex flex-col justify-between items-center relative">
+        <svg class="w-full max-w-xl absolute top-1/2 -translate-y-1/2 left-[40%] -translate-x-[40%]" version="1.1"
+            viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+            <path transform="translate(1e3 334)"
+                d="m0 0 5 1 22 12 48 28 130 75 24 14 104 60 48 28 8 6 1 4v208l-1 69-9 6-27 15-42 24-26 15-25 14-17 10-23 13-24 14-49 28-26 15-24 14-52 30-24 14-27 16-2 7-1 374-6 5-24 14-25 14-21 13-6 7-20 12-28 16-48 28-52 30-48 28-52 30-21 12-26 15-3-1 2-94 5-5 46-26 18-10 26-15 25-14 23-13 18-10 21-12 18-10 26-15 25-14 21-12 23-13 1-1 1-20v-245l2-4 1-491-25 13-15 9-24 14-8 5h-2l-1 660-5 5-84 48-24 14-27 15-24 14-28 16-20 11-9 1-5-5-1-5v-898l2-6 6-5 24-14 26-15 21-12 24-14 28-16 27-16 25-14 17-10 26-15 24-14 52-30 24-14 23-13 22-13 15-8zm2 90-20 11-17 10-23 13-24 14-28 16-43 25-28 16-26 15-24 14-52 30-18 11-5 4-1 12v705l1 7 4 3 7 1 14-7 20-12 13-8 5-5 1-2 1-658 4-2 43-25 45-26 24-14 23-13 27-16 25-14 15-9 28-16 9-3 14 7 24 14 26 15 24 14 56 32 17 10 26 15 24 14 26 15 16 9 2 1h12l16-8 22-12 5-5 1-3v-14l-6-7-23-13-24-14-14-8-17-10-26-15-28-16-24-14-21-12-26-15-24-14-25-14-24-14-21-12-6-3zm-3 168-8 4-1 5v205l5-1 58-34 19-11 15-9 26-15 48-28 9-6 1-2v-8l-5-6-16-9-22-13-52-30-49-28-23-13zm309 126-16 8-28 16-24 14-28 16-24 14-52 30-28 16-26 15-24 14-21 12-24 14-13 8-9 7v72l6-2 22-12 22-13 24-14 21-12 29-17 21-12 24-14 45-26 24-14 52-30 23-13 5-4v-73z"
+                fill="#35CDB6" />
+            <path transform="translate(1e3 334)"
+                d="m0 0 5 1 22 12 48 28 130 75 24 14 104 60 6 4-2 4 2 4 7 5 4 2 6 4 4 1 3 5-1 4 8 5 3 3v2l5 15v7h-1v11l-1 3v5l-4 5v10l-3 6v7l-5 4-4-1 2-5h-4l1 3-3 3-10 4-6 5-2 4-4-1 1-5-5 1-3 5h-2v2h-2v2l-8 4-10 2v2l-7 4-4-3v-2h-5l-1-2 3-1 2 1v-4h2l2-4 4-1 1-4 3-1-1-4v-3l5-5h2l2-4 9-5 4-9 3-12v-9l-5-1-9-9-10-6-10-5-8-5-9-2h-6l-12-5-6-4-12-7-9-5-9-4-15-10-10-4-15-8v-2l-5-2-7-3-4-5-9-4-11-7-3-1-5-5-12-5-12-6v-2l-9-3-5-4-14-7-14-10-12-5-3-2v-2l-3 1-3-1-1-3-9-5-4-3v-2l-6-1-11-6v-2l-5-2-4-2-3-4-3-1h-10l-8 6-6 3-2 3-7 3-6 4-1 1h-5v2l-7 3-6 1-1 3-3 1v-4l2-3-11 3-7 5-11 4h-2v2l-18 8-8 4-15 5-6 4-7 2-5 2-13 3-9 4v-2l17-9 11-8 15-8 6-4 7-7-6-2 2-1 2-4 3-3 1-5 6-5 12-3-5-10 1-7v-2l4-4-3-2 6-5 7-3 2-4-5 1-2 4-6 1-2 1-2-1v2l-7 2-3-1-2 4-6 1v3l-8 2-7 6-6 1-2-2 15-9 26-15 21-12 26-15 29-17 15-8z"
+                fill="#3CCDD5" />
+            <path transform="translate(1e3 334)"
+                d="m0 0 5 1 22 12 48 28 15 9 4 7h-5l-1-3-6-1-4-2-2-2-16-8-13-8-12-6-5-1-10-6v-2l-6-1-5-4-4-4-10-3v-4z"
+                fill="#35CDB6" />
+            <path transform="translate(1256,480)"
+                d="m0 0 4 1 25 14 24 14 22 13 3 5-1 3-4-1-14-7-8-7-10-4-12-7-6-3-5-3-11-8-4-3v-2l-4-2z"
+                fill="#35CDB6" />
+            <path transform="translate(1282,641)"
+                d="m0 0h2l1 6-4 5h-2v2l5-1-2 3h-14l-5-1v2h-2l-1-2-5-2v-2l-4-2-1-2 1-4 6 2 2 1h12z" fill="#3CCDD3" />
+            <path transform="translate(1113,400)" d="m0 0 11 2 19 11v3l2 1-2 1-1 2-15-8v-2l-6-1-10-5v-3z"
+                fill="#35CDB7" />
+            <path transform="translate(1149,417)" d="m0 0 15 8 8 5-1 4h-5l-16-8v-2h-2l-4-6z" fill="#35CDB7" />
+            <path transform="translate(988,507)" d="m0 0h2l-2 4h-2v4l-5 2v2l-4 2h-7l-1 2-13 6h-3v-2l28-16z"
+                fill="#3CCDD2" />
+            <path transform="translate(950,529)" d="m0 0 2 1-4 5-6 3-7 4h-3l-1 2-6 2-4 3h-2l1-3 23-13z"
+                fill="#3BCDD0" />
+            <path transform="translate(1189,442)" d="m0 0 6 1 12 7v3l-6-1-10-6z" fill="#35CDB8" />
+            <path transform="translate(861,414)" d="m0 0 5 1-3 3-5 4-7 1-4 4v-5z" fill="#3CCDD2" />
+            <path transform="translate(970,517)" d="m0 0 2 1-3 5-13 6h-3v-2z" fill="#3BCDCF" />
+            <path transform="translate(1287,654)" d="m0 0h5l-5 4-3 2h-5l5-5z" fill="#3DCDD6" />
+            <path transform="translate(1342,529)" d="m0 0 5 2 5 3-1 3h-4v-3l-4-1z" fill="#3CCDD2" />
+            <path transform="translate(842,425)" d="m0 0 4 1-1 4-4 1-4-1v-2z" fill="#3CCDD3" />
+            <path transform="translate(1389,577)" d="m0 0h1l1 14-3 1v-8-3z" fill="#3DCDD6" />
+            <path transform="translate(905,402)" d="m0 0 2 1-4 2v3l-6 1 3-5z" fill="#3DCDD6" />
+        </svg>
+
+        <div id="about-me"
+            class="hidden absolute top-1/2 -translate-y-1/2 z-10 w-[90%] max-w-4xl bg-[#ffffff10] text-center backdrop-blur-2xl px-4 py-7">
+            <button onclick="showAhoutMe()" class="absolute top-1 right-3 hover:rotate-90 transition-all">
+                <svg class="w-5" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path
+                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                </svg>
+            </button>
+            <button
+                class="text-3xl text-purple-400 font-bold self-center px-3 border-b-2 border-purple-200 rounded-lg mb-8">
+                <span class="text-white">About</span> Me
+            </button>
+            <p class="text-center sm:text-justify tracking-tight leading-6 font-['Spartan'] p-4">I'm a Full Stack
+                Developer passionate
+                about crafting seamless digital experiences. With expertise in both front-end and back-end development,
+                I build robust web applications that are both functional and user-friendly. Always eager to explore the
+                latest tech, I'm committed to delivering high-quality, innovative solutions. Let's Create something
+                Great together!</p>
+        </div>
+
+        <div id="header-top" class="flex justify-between p-4 w-full max-w-6xl items-center">
+            <a href="#"><img class="w-full max-w-20" src="images/white_logo.svg" alt="website logo"></a>
+            <ul class="flex gap-6 items-center">
+                <!-- <li>
+                    <a href="#" target="_blank">
+                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-sun">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </a>
+                </li> -->
+                <li>
+                    <div class="cursor-pointer relative group">
+                        <a href="My-resume-final.pdf" download
+                            class="invisible absolute rounded bg-blue-500 py-2 px-3 top-3 -left-1/4 -translate-x-1/3 group-hover:top-8 after:content-[''] after:w-3 after:h-3 after:bg-blue-500 after:absolute after:-top-[5px] after:left-1/2 after:-translate-x-1/2 after:rotate-45 group-hover:visible group-hover:scale-105 transition-all ease-in-out duration-250">
+                            Resume</a>
+                        <a href="My-resume-final.pdf" download>
+                            <svg class="w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 384 512">
+                                <path
+                                    d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-288-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM216 232l0 102.1 31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31L168 232c0-13.3 10.7-24 24-24s24 10.7 24 24z" />
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="tel:8302007892" target="_blank">
+                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/+918302007892?text=Hi, I'm from your Portfolio." target="_blank">
+                        <svg class="w-6" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="whatsapp"
+                            role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="header-mid" class="w-full max-w-4xl">
+            <div id="header-info" class="pl-5 max-w-4xl relative">
+                <h1 class="text-6xl font-['Spartan'] mr-12">
+                    Pradeep Jat
+                </h1>
+                <p class="font-['Merriweather'] text-2xl italic my-3 mr-12">
+                    Full Stack Developer
+                </p>
+                <button onclick="showAhoutMe()"
+                    class="bg-[#35e1aa] text-lg py-3 px-5 rounded font-extrabold bg-gradient-to-l from-[#59c3da] to-[#094f35e6] relative hover:scale-105 ease-in-out duration-150 group">
+                    About Me
+                    <svg class="w-11 h-10 absolute top-1/2 -translate-y-1/2 -right-7 group-hover:-right-8 ease-in-out duration-100 delay-100"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px"
+                        viewBox="0 0 100 100">
+                        <g transform="translate(0,-952.36218)">
+                            <path style="
+                          text-indent: 0;
+                          text-transform: none;
+                          direction: ltr;
+                          color: #000000;
+                          enable-background: accumulate;
+                        " d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z"
+                                fill="#fff" fill-opacity="1" stroke="white" stroke-width="2" marker="none"
+                                visibility="visible" display="inline" overflow="visible" />
+                        </g>
+                    </svg>
+                </button>
+            </div>
+            <div class="text-[#b0b2c3] absolute top-1/2 -translate-y-1/2 right-5">
+                <ul class="flex flex-col items-center gap-6 md:gap-4">
+                    <li title="Linkedin">
+                        <a href="https://www.linkedin.com/in/pradeepjat/" target="_blank">
+                            <svg class="w-6 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li title="Twitter">
+                        <a href="https://x.com/ProFighter97332" target="_blank">
+                            <svg class="w-6 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li title="Instagram">
+                        <a href="https://www.instagram.com/pradeepjat143/">
+                            <svg class="w-6 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li title="Mail">
+                        <a href="mailto:pradeepjat12377@gmail.com" target="_blank">
+                            <svg class="w-6 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li title="Youtube">
+                        <a href="https://github.com/mobphycho100" target="_blank">
+                            <svg class="w-7 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"
+                                fill="currentColor">
+                                <path
+                                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="header-bottom">
+            <a href="#skills">
+                <button
+                    class="bg-[#35e1aa] mb-11 text-lg py-3 px-5 rounded font-extrabold bg-gradient-to-l from-[#59c3da] to-[#094f35e6] relative hover:scale-105 ease-in-out duration-150 group">
+                    Explore More
+                    <svg class="w-11 h-10 absolute rotate-90 left-1/2 -translate-x-1/2 top-7 group-hover:top-8 ease-in-out duration-100 delay-100"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px"
+                        viewBox="0 0 100 100">
+                        <g transform="translate(0,-952.36218)">
+                            <path style="
+                          text-indent: 0;
+                          text-transform: none;
+                          direction: ltr;
+                          color: #000000;
+                          enable-background: accumulate;
+                        " d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z"
+                                fill="#fff" fill-opacity="1" stroke="white" stroke-width="2" marker="none"
+                                visibility="visible" display="inline" overflow="visible" />
+                        </g>
+                    </svg>
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <!-- main body  -->
+    <main>
+        <section id="skills" class="md:min-h-screen text-white flex flex-col items-center mb-[100px] md:mb-0">
+            <button
+                class="text-3xl text-[#59c3da] font-bold self-center px-3 border-b-2 border-green-200 rounded-lg mt-3">
+                Skills
+            </button>
+
+            <div class="mt-20 p-4 pb-12 max-w-4xl">
+                <ul class="flex justify-center flex-wrap gap-5 lg:gap-6 max-w-3xl">
+                    <li
+                        class="w-36 cursor-pointer flex flex-col justify-between gap-3 items-center py-3 px-5 rounded-md border-2 border-orange-400 transition duration-200">
+                        <img class="w-12"
+                            src="https://res.cloudinary.com/dffu1ungl/image/upload/v1724221811/c573ff5552d6da9a1d28ec4e27cd1445-removebg-preview_w2hkck.png"
+                            alt="HTML">
+                        <span class="font-bold text-lg tracking-wider">HTML</span>
+                    </li>
+
+                    <li
+                        class="w-36 cursor-pointer flex flex-col justify-between gap-3 items-center py-3 px-5 rounded-md border-2 border-[#2295af] transition duration-200">
+                        <img class="w-12"
+                            src="https://res.cloudinary.com/dffu1ungl/image/upload/v1724222003/ac262626eb1e924c85b8b68fe97c2213-removebg-preview_kihgsi.png"
+                            alt="CSS">
+                        <span class="font-bold text-lg tracking-wider">CSS</span>
+                    </li>
+
+                    <li
+                        class="w-36 cursor-pointer flex flex-col justify-between gap-3 items-center py-3 px-5 rounded-md border-2 border-purple-500 transition duration-200">
+                        <img class="w-16"
+                            src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709472150/Bootstrap-removebg-preview_opsbke.png"
+                            alt="Bootstrap">
+                        <span class="font-bold text-lg tracking-wider">Bootstrap</span>
+                    </li>
+
+                    <li
+                        class="w-36 cursor-pointer flex flex-col justify-between gap-3 items-center py-3 px-5 rounded-md border-2 border-yellow-400 transition duration-200">
+                        <img class="w-11"
+                            src="https://res.cloudinary.com/dffu1ungl/image/upload/v1712139571/10_Best_Cheat_Sheets_That_A_Programmer_Must_Have-removebg-preview_daf4wt.png"
+                            alt="JavaScript">
+                        <span class="font-bold text-lg tracking-wider">JavaScript</span>
+                    </li>
+
+                    <li
+                        class="w-36 cursor-pointer flex flex-col justify-between gap-3 items-center py-3 px-5 rounded-md border-2 border-sky-600 transition duration-200">
+                        <img class="w-14"
+                            src="https://res.cloudinary.com/dffu1ungl/image/upload/v1712150985/Windows_Vista__70-620__Part_1__Install_and_Getting_Started-removebg-preview_dlar2d.png"
+                            alt="React">
+                        <span class="font-bold text-lg tracking-wider">React JS</span>
+                    </li>
+
+                    <li
+                        class="w-36 cursor-pointer flex flex-col justify-between gap-3 items-center py-3 px-5 rounded-md border-2 border-green-500 transition duration-200">
+                        <img class="w-14"
+                            src="https://res.cloudinary.com/dffu1ungl/image/upload/v1724222161/0c8121171fefa57a22351d1a10e96c2b-removebg-preview_eglfs1.png"
+                            alt="Nodejs">
+                        <span class="font-bold text-lg tracking-wider">Node JS</span>
+                    </li>
+
+                    <li
+                        class="w-36 cursor-pointer flex flex-col justify-between gap-3 items-center py-3 px-5 rounded-md border-2 border-slate-400 transition duration-200">
+                        <img class="w-12"
+                            src="https://res.cloudinary.com/dffu1ungl/image/upload/v1724079122/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo-removebg-preview_yihadf.png"
+                            alt="expressjs">
+                        <span class="font-bold text-lg tracking-wider">ExpressJS</span>
+                    </li>
+
+                    <li
+                        class="w-36 cursor-pointer flex flex-col justify-between gap-3 items-center py-3 px-5 rounded-md border-2 border-[#67658a] transition duration-200">
+                        <img class="w-12"
+                            src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709472150/SQL_Basics___Hands-On_Beginner_SQL_Tutorial_Analyzing_Bike-Sharing-removebg-preview_a0aug6.png"
+                            alt="SQL">
+                        <span class="font-bold text-lg tracking-wider">SQL</span>
+                    </li>
+
+                    <li
+                        class="w-36 cursor-pointer flex flex-col justify-between gap-3 items-center py-3 px-5 rounded-md border-2 border-[#386f9e] transition duration-200">
+                        <img class="w-11"
+                            src="https://res.cloudinary.com/dffu1ungl/image/upload/v1709472151/download__2_-removebg-preview_sjc7gv.png"
+                            alt="Python">
+                        <span class="font-bold text-lg tracking-wider">Python</span>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="min-h-screen text-white flex flex-col items-center">
+            <button class="text-3xl font-bold self-center px-3 border-b-2 border-green-200 rounded-lg mt-3">
+                My <span class="text-[#77c278]">Projects</span>
+            </button>
+
+            <div id="projects-div" class="mt-16 p-4 pb-12 w-full flex flex-col gap-24 items-center">
+                <div id="project1" class="project-card w-full relative group">
+                    <div class="absolute bg-black inset-0 opacity-55"></div>
+                    <div
+                        class="absolute bg-gradient-to-r from-[#16222Af5] to-[#3A6073f0] inset-0 right-full group-hover:right-0 transition-all duration-500 delay-100">
+                    </div>
+                    <div
+                        class="pl-7 max-w-4xl relative top-1/2 -translate-y-1/2 transition-all delay-300 group-hover:scale-[1.02]">
+                        <h1 class="text-4xl font-['Spartan'] mr-12">
+                            Nxt <span class="text-blue-400">Trendz</span>
+                        </h1>
+                        <p class="font-['Merriweather'] italic my-3 mr-12">
+                            React ECommerse Application <br>
+                            <span class="text-[0.6rem] mt-2 text-slate-300">(See Read Me for credientials)</span>
+                        </p>
+                        <a href="https://github.com/mobphycho100/NxtTrendz-E-commerce-Website-NxtWave-Project"
+                            target="_blank">
+                            <button
+                                class="bg-[#35e1aa] py-2 px-4 rounded font-extrabold bg-gradient-to-l from-[#59c3da] to-[#094f35e6] relative hover:scale-105 ease-in-out duration-150 group">
+                                Checkout
+                                <svg class="w-11 h-10 absolute top-1/2 -translate-y-1/2 -right-7 group-hover:-right-8 ease-in-out duration-100 delay-100"
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px"
+                                    y="0px" viewBox="0 0 100 100">
+                                    <g transform="translate(0,-952.36218)">
+                                        <path style="
+                                  text-indent: 0;
+                                  text-transform: none;
+                                  direction: ltr;
+                                  color: #000000;
+                                  enable-background: accumulate;
+                                " d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z"
+                                            fill="#fff" fill-opacity="1" stroke="white" stroke-width="2" marker="none"
+                                            visibility="visible" display="inline" overflow="visible" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="project2" class="project-card w-full relative group">
+                    <div class="absolute bg-black inset-0 opacity-35"></div>
+                    <div
+                        class="absolute bg-gradient-to-r from-[#16222Af5] to-[#3A6073f0] inset-0 right-full group-hover:right-0 transition-all duration-500 delay-100">
+                    </div>
+                    <div
+                        class="pl-7 max-w-4xl relative top-1/2 -translate-y-1/2 transition-all delay-300 group-hover:scale-[1.02]">
+                        <h1 class="text-4xl tracking-widest text-blue-500 font-['Matemasie'] mr-12">
+                            Jobby
+                        </h1>
+                        <p class="font-['Merriweather'] italic my-3 mr-12">
+                            React Job-Search Platform <br>
+                            <span class="text-[0.6rem] mt-2 text-slate-300">(See Read Me for credientials)</span>
+                        </p>
+                        <a href="https://github.com/mobphycho100/The-Jobby-App" target="_blank">
+                            <button
+                                class="bg-[#35e1aa] py-2 px-4 rounded font-extrabold bg-gradient-to-l from-[#59c3da] to-[#094f35e6] relative hover:scale-105 ease-in-out duration-150 group">
+                                Checkout
+                                <svg class="w-11 h-10 absolute top-1/2 -translate-y-1/2 -right-7 group-hover:-right-8 ease-in-out duration-100 delay-100"
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px"
+                                    y="0px" viewBox="0 0 100 100">
+                                    <g transform="translate(0,-952.36218)">
+                                        <path style="
+                                  text-indent: 0;
+                                  text-transform: none;
+                                  direction: ltr;
+                                  color: #000000;
+                                  enable-background: accumulate;
+                                " d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z"
+                                            fill="#fff" fill-opacity="1" stroke="white" stroke-width="2" marker="none"
+                                            visibility="visible" display="inline" overflow="visible" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="project3" class="project-card w-full relative group">
+                    <div class="absolute bg-black inset-0 opacity-55"></div>
+                    <div
+                        class="absolute bg-gradient-to-r from-[#16222Af5] to-[#3A6073f0] inset-0 right-full group-hover:right-0 transition-all duration-500 delay-100">
+                    </div>
+                    <div
+                        class="pl-7 max-w-4xl relative top-1/2 -translate-y-1/2 transition-all delay-300 group-hover:scale-[1.02]">
+                        <h1 class="text-4xl tracking-widest text-stone-200 font-['Nunito'] font-bold mr-12">
+                            Matching Game
+                        </h1>
+                        <p class="font-['Merriweather'] italic my-3 mr-12">
+                            Match as fast as you can...
+                        </p>
+                        <a href="https://github.com/mobphycho100/Match-Game-NxtWave" target="_blank">
+                            <button
+                                class="bg-[#35e1aa] py-2 px-4 rounded font-extrabold bg-gradient-to-l from-[#59c3da] to-[#094f35e6] relative hover:scale-105 ease-in-out duration-150 group">
+                                Checkout
+                                <svg class="w-11 h-10 absolute top-1/2 -translate-y-1/2 -right-7 group-hover:-right-8 ease-in-out duration-100 delay-100"
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px"
+                                    y="0px" viewBox="0 0 100 100">
+                                    <g transform="translate(0,-952.36218)">
+                                        <path style="
+                                  text-indent: 0;
+                                  text-transform: none;
+                                  direction: ltr;
+                                  color: #000000;
+                                  enable-background: accumulate;
+                                " d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z"
+                                            fill="#fff" fill-opacity="1" stroke="white" stroke-width="2" marker="none"
+                                            visibility="visible" display="inline" overflow="visible" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="project4" class="project-card w-full relative group">
+                    <div class="absolute bg-black inset-0 opacity-55"></div>
+                    <div
+                        class="absolute bg-gradient-to-r from-[#16222Af5] to-[#3A6073f0] inset-0 right-full group-hover:right-0 transition-all duration-500 delay-100">
+                    </div>
+                    <div
+                        class="pl-7 max-w-4xl relative top-1/2 -translate-y-1/2 transition-all delay-300 group-hover:scale-[1.02]">
+                        <h1 class="text-4xl tracking-widest text-stone-200 font-['Dancing'] font-bold mr-12">
+                            Rock Paper Scissors
+                        </h1>
+                        <p class="font-['Merriweather'] italic my-3 mr-12">
+                            Let's play a game
+                        </p>
+                        <a href="https://github.com/mobphycho100/Rock-Paper-Scissors-Game-NxtWave" target="_blank">
+                            <button
+                                class="bg-[#35e1aa] py-2 px-4 rounded font-extrabold bg-gradient-to-l from-[#59c3da] to-[#094f35e6] relative hover:scale-105 ease-in-out duration-150 group">
+                                Checkout
+                                <svg class="w-11 h-10 absolute top-1/2 -translate-y-1/2 -right-7 group-hover:-right-8 ease-in-out duration-100 delay-100"
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px"
+                                    y="0px" viewBox="0 0 100 100">
+                                    <g transform="translate(0,-952.36218)">
+                                        <path style="
+                                  text-indent: 0;
+                                  text-transform: none;
+                                  direction: ltr;
+                                  color: #000000;
+                                  enable-background: accumulate;
+                                " d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z"
+                                            fill="#fff" fill-opacity="1" stroke="white" stroke-width="2" marker="none"
+                                            visibility="visible" display="inline" overflow="visible" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="project5" class="project-card w-full relative group">
+                    <div class="absolute bg-black inset-0 opacity-55"></div>
+                    <div
+                        class="absolute bg-gradient-to-r from-[#16222Af5] to-[#3A6073f0] inset-0 right-full group-hover:right-0 transition-all duration-500 delay-100">
+                    </div>
+                    <div
+                        class="pl-7 max-w-4xl relative top-1/2 -translate-y-1/2 transition-all delay-300 group-hover:scale-[1.02]">
+                        <h1 class="text-4xl text-stone-200 font-['Spartan'] font-bold mr-12">
+                            NetFlix Clone
+                        </h1>
+                        <p class="font-['Merriweather'] italic my-3 mr-12">
+                            Using HTML and CSS
+                        </p>
+                        <a href="https://pjnetflixrespo.ccbp.tech/" target="_blank">
+                            <button
+                                class="bg-[#35e1aa] py-2 px-4 rounded font-extrabold bg-gradient-to-l from-[#59c3da] to-[#094f35e6] relative hover:scale-105 ease-in-out duration-150 group">
+                                Checkout
+                                <svg class="w-11 h-10 absolute top-1/2 -translate-y-1/2 -right-7 group-hover:-right-8 ease-in-out duration-100 delay-100"
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px"
+                                    y="0px" viewBox="0 0 100 100">
+                                    <g transform="translate(0,-952.36218)">
+                                        <path style="
+                                  text-indent: 0;
+                                  text-transform: none;
+                                  direction: ltr;
+                                  color: #000000;
+                                  enable-background: accumulate;
+                                " d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z"
+                                            fill="#fff" fill-opacity="1" stroke="white" stroke-width="2" marker="none"
+                                            visibility="visible" display="inline" overflow="visible" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="project6" class="project-card w-full relative group">
+                    <div class="absolute bg-black inset-0 opacity-55"></div>
+                    <div
+                        class="absolute bg-gradient-to-r from-[#16222Af5] to-[#3A6073f0] inset-0 right-full group-hover:right-0 transition-all duration-500 delay-100">
+                    </div>
+                    <div
+                        class="pl-7 max-w-4xl relative top-1/2 -translate-y-1/2 transition-all delay-300 group-hover:scale-[1.02]">
+                        <h1 class="text-4xl tracking-wide text-stone-200 font-sans font-bold mr-12">
+                            Microsoft Clone
+                        </h1>
+                        <p class="font-['Merriweather'] italic my-3 mr-12">
+                            Using HTML and Tailwind CSS
+                        </p>
+                        <a href="https://pjmicrosoft.ccbp.tech/" target="_blank">
+                            <button
+                                class="bg-[#35e1aa] py-2 px-4 rounded font-extrabold bg-gradient-to-l from-[#59c3da] to-[#094f35e6] relative hover:scale-105 ease-in-out duration-150 group">
+                                Checkout
+                                <svg class="w-11 h-10 absolute top-1/2 -translate-y-1/2 -right-7 group-hover:-right-8 ease-in-out duration-100 delay-100"
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px"
+                                    y="0px" viewBox="0 0 100 100">
+                                    <g transform="translate(0,-952.36218)">
+                                        <path style="
+                                  text-indent: 0;
+                                  text-transform: none;
+                                  direction: ltr;
+                                  color: #000000;
+                                  enable-background: accumulate;
+                                " d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z"
+                                            fill="#fff" fill-opacity="1" stroke="white" stroke-width="2" marker="none"
+                                            visibility="visible" display="inline" overflow="visible" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-me" class="text-white flex flex-col items-center">
+            <button class="text-3xl font-bold self-center px-3 border-b-2 border-orange-200 rounded-lg mt-3">
+                <span class="text-[#d88965]">Contact</span> Me
+            </button>
+
+            <div class="flex flex-col md:flex-row items-center w-full mt-10 p-7 mb-12">
+                <div class="w-full">
+                    <img src="./images/contact-me.svg" alt="phone" />
+                </div>
+                <form class="w-full" name="contact" method="POST" netlify>
+                    <input type="hidden" name="form-name" value="contact">
+
+                    <label for="name" class="block mb-2 text-base font-bold">Name</label>
+                    <div class="relative mb-4">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
+                            </svg>
+                        </div>
+                        <input type="text" id="name" name="name"
+                            class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Enter your name" />
+                    </div>
+                    <label for="email" class="block mb-2 text-base font-bold dark:text-white">Your Email</label>
+                    <div class="relative mb-4">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                                <path
+                                    d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                                <path
+                                    d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                            </svg>
+                        </div>
+                        <input type="email" id="email" name="email"
+                            class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="name@mail.com" />
+                    </div>
+                    <label for="message" class="block mb-2 text-base font-bold dark:text-white">Message</label>
+                    <div class="relative mb-4">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"></div>
+                        <textarea id="message" name="message" rows="8"
+                            class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full text-white bg-[#1788ae] hover:bg-[#1280a4] focus:ring-2 focus:ring-[#4489a0] font-extrabold rounded-lg text-lg px-5 py-2.5 me-2 mb-2 focus:outline-none">
+                        Send
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer  -->
+    <footer class="flex flex-col items-center pb-12">
+        <p class="text-sm text-gray-300">Pradeep Jat &copy; 2024</p>
+        <div class="cursor-pointer text-white my-4 relative group">
+            <a href="#"
+                class="invisible absolute rounded bg-blue-500 py-2 px-3 right-0 group-hover:-right-16 top-1/2 -translate-y-1/2 after:content-[''] after:w-3  after:h-3 after:bg-blue-500 after:absolute after:-left-[4px] after:top-1/2 after:-translate-y-1/2 after:rotate-45 group-hover:visible group-hover:scale-105 transition-all ease-in-out duration-250">To
+                Top</a>
+            <svg class="w-20" version="1.1" viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+                <path transform="translate(1e3 334)"
+                    d="m0 0 5 1 22 12 48 28 130 75 24 14 104 60 48 28 8 6 1 4v208l-1 69-9 6-27 15-42 24-26 15-25 14-17 10-23 13-24 14-49 28-26 15-24 14-52 30-24 14-27 16-2 7-1 374-6 5-24 14-25 14-21 13-6 7-20 12-28 16-48 28-52 30-48 28-52 30-21 12-26 15-3-1 2-94 5-5 46-26 18-10 26-15 25-14 23-13 18-10 21-12 18-10 26-15 25-14 21-12 23-13 1-1 1-20v-245l2-4 1-491-25 13-15 9-24 14-8 5h-2l-1 660-5 5-84 48-24 14-27 15-24 14-28 16-20 11-9 1-5-5-1-5v-898l2-6 6-5 24-14 26-15 21-12 24-14 28-16 27-16 25-14 17-10 26-15 24-14 52-30 24-14 23-13 22-13 15-8zm2 90-20 11-17 10-23 13-24 14-28 16-43 25-28 16-26 15-24 14-52 30-18 11-5 4-1 12v705l1 7 4 3 7 1 14-7 20-12 13-8 5-5 1-2 1-658 4-2 43-25 45-26 24-14 23-13 27-16 25-14 15-9 28-16 9-3 14 7 24 14 26 15 24 14 56 32 17 10 26 15 24 14 26 15 16 9 2 1h12l16-8 22-12 5-5 1-3v-14l-6-7-23-13-24-14-14-8-17-10-26-15-28-16-24-14-21-12-26-15-24-14-25-14-24-14-21-12-6-3zm-3 168-8 4-1 5v205l5-1 58-34 19-11 15-9 26-15 48-28 9-6 1-2v-8l-5-6-16-9-22-13-52-30-49-28-23-13zm309 126-16 8-28 16-24 14-28 16-24 14-52 30-28 16-26 15-24 14-21 12-24 14-13 8-9 7v72l6-2 22-12 22-13 24-14 21-12 29-17 21-12 24-14 45-26 24-14 52-30 23-13 5-4v-73z"
+                    fill="#35CDB6" />
+                <path transform="translate(1e3 334)"
+                    d="m0 0 5 1 22 12 48 28 130 75 24 14 104 60 6 4-2 4 2 4 7 5 4 2 6 4 4 1 3 5-1 4 8 5 3 3v2l5 15v7h-1v11l-1 3v5l-4 5v10l-3 6v7l-5 4-4-1 2-5h-4l1 3-3 3-10 4-6 5-2 4-4-1 1-5-5 1-3 5h-2v2h-2v2l-8 4-10 2v2l-7 4-4-3v-2h-5l-1-2 3-1 2 1v-4h2l2-4 4-1 1-4 3-1-1-4v-3l5-5h2l2-4 9-5 4-9 3-12v-9l-5-1-9-9-10-6-10-5-8-5-9-2h-6l-12-5-6-4-12-7-9-5-9-4-15-10-10-4-15-8v-2l-5-2-7-3-4-5-9-4-11-7-3-1-5-5-12-5-12-6v-2l-9-3-5-4-14-7-14-10-12-5-3-2v-2l-3 1-3-1-1-3-9-5-4-3v-2l-6-1-11-6v-2l-5-2-4-2-3-4-3-1h-10l-8 6-6 3-2 3-7 3-6 4-1 1h-5v2l-7 3-6 1-1 3-3 1v-4l2-3-11 3-7 5-11 4h-2v2l-18 8-8 4-15 5-6 4-7 2-5 2-13 3-9 4v-2l17-9 11-8 15-8 6-4 7-7-6-2 2-1 2-4 3-3 1-5 6-5 12-3-5-10 1-7v-2l4-4-3-2 6-5 7-3 2-4-5 1-2 4-6 1-2 1-2-1v2l-7 2-3-1-2 4-6 1v3l-8 2-7 6-6 1-2-2 15-9 26-15 21-12 26-15 29-17 15-8z"
+                    fill="#3CCDD5" />
+                <path transform="translate(1e3 334)"
+                    d="m0 0 5 1 22 12 48 28 15 9 4 7h-5l-1-3-6-1-4-2-2-2-16-8-13-8-12-6-5-1-10-6v-2l-6-1-5-4-4-4-10-3v-4z"
+                    fill="#35CDB6" />
+                <path transform="translate(1256,480)"
+                    d="m0 0 4 1 25 14 24 14 22 13 3 5-1 3-4-1-14-7-8-7-10-4-12-7-6-3-5-3-11-8-4-3v-2l-4-2z"
+                    fill="#35CDB6" />
+                <path transform="translate(1282,641)"
+                    d="m0 0h2l1 6-4 5h-2v2l5-1-2 3h-14l-5-1v2h-2l-1-2-5-2v-2l-4-2-1-2 1-4 6 2 2 1h12z" fill="#3CCDD3" />
+                <path transform="translate(1113,400)" d="m0 0 11 2 19 11v3l2 1-2 1-1 2-15-8v-2l-6-1-10-5v-3z"
+                    fill="#35CDB7" />
+                <path transform="translate(1149,417)" d="m0 0 15 8 8 5-1 4h-5l-16-8v-2h-2l-4-6z" fill="#35CDB7" />
+                <path transform="translate(988,507)" d="m0 0h2l-2 4h-2v4l-5 2v2l-4 2h-7l-1 2-13 6h-3v-2l28-16z"
+                    fill="#3CCDD2" />
+                <path transform="translate(950,529)" d="m0 0 2 1-4 5-6 3-7 4h-3l-1 2-6 2-4 3h-2l1-3 23-13z"
+                    fill="#3BCDD0" />
+                <path transform="translate(1189,442)" d="m0 0 6 1 12 7v3l-6-1-10-6z" fill="#35CDB8" />
+                <path transform="translate(861,414)" d="m0 0 5 1-3 3-5 4-7 1-4 4v-5z" fill="#3CCDD2" />
+                <path transform="translate(970,517)" d="m0 0 2 1-3 5-13 6h-3v-2z" fill="#3BCDCF" />
+                <path transform="translate(1287,654)" d="m0 0h5l-5 4-3 2h-5l5-5z" fill="#3DCDD6" />
+                <path transform="translate(1342,529)" d="m0 0 5 2 5 3-1 3h-4v-3l-4-1z" fill="#3CCDD2" />
+                <path transform="translate(842,425)" d="m0 0 4 1-1 4-4 1-4-1v-2z" fill="#3CCDD3" />
+                <path transform="translate(1389,577)" d="m0 0h1l1 14-3 1v-8-3z" fill="#3DCDD6" />
+                <path transform="translate(905,402)" d="m0 0 2 1-4 2v3l-6 1 3-5z" fill="#3DCDD6" />
+            </svg>
+        </div>
+        <ul class="mx-auto flex items-center justify-center gap-7 text-[#b0b2c3]">
+            <li>
+                <a href="https://www.linkedin.com/in/pradeepjat/" target="_blank">
+                    <svg class="w-5 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="https://x.com/ProFighter97332" target="_blank">
+                    <svg class="w-5 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/pradeepjat143/">
+                    <svg class="w-5 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:pradeepjat12377@gmail.com" target="_blank">
+                    <svg class="w-6 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@TheOnlyPradeep">
+                    <svg class="w-6 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                        fill="currentColor">
+                        <path
+                            d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <!-- script files -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
